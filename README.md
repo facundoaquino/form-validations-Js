@@ -5,9 +5,12 @@
 
 
 
+
+
 ![Esta es una imagen de ejemplo](https://www.entramar.mvl.edu.ar/wp-content/uploads/2016/11/google_form.jpg  ) 
 
 -  coloreo de codigo con  [prismjs.js]
+-  [loaders]
 
 
 ## Cambiar margen en prims.css si se desea controlar el bloque con auto
@@ -26,3 +29,4 @@ pre[class*="language-"] {
 
 [prismjs.js]:https://prismjs.com/
 [Visitar GitHub Pages]: https://facundoaquino.github.io/formularios-js/
+[loaders]:https://loading.io/css/
