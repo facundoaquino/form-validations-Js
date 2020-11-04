@@ -49,10 +49,58 @@
   
         </code>
       </pre>
+
+
+     <hr class="separation">
+
+     <section class="form2  ">
+     
+			<form action="">
+        <label for="name">Nombre</label>
+        <!-- el atributo name indica el nombre con el que van a vijar los datos de ese campo -->
+        <input type="text" id="name1" placeholder="Ingrese su nombre" required autocomplete="off" /> 
+        <label for="tel">Telefono</label>
+        <input type="text" id="tel1" placeholder="Ingrese su telefono" required/>
+        
+        <input id="submit1" type="submit" value="Enviar">
+			</form>
+    </section>
        
 <form action=""></form>
 		<script src="https://kit.fontawesome.com/389c8e1dce.js" crossorigin="anonymous"></script>
 		<script src="assets/js/prism.js"></script>
-		<script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <pre class="precode">
+      
+      <code class="language-javascript">
+        const $nombre1 = document.getElementById('name1')
+        const $tel1 = document.getElementById('tel1')
+        const $submit1 = document.getElementById('submit1')
+        //por defecto boton desabilitado 
+        $submit1.setAttribute('disabled','true')
+         
+        $nombre1.addEventListener('keyup',(e)=>{
+            
+             //expresion regular \d indica todo lo que   es numeros
+             
+            $nombre1.value=$nombre1.value.replace(/\d/,'')
+        
+             $nombre1.value&&$tel1.value&&$submit1.removeAttribute('disabled')
+             !$nombre1.vale||!$tel1.value &&  $submit1.setAttribute('disabled','true')
+        })
+        
+        $tel1.addEventListener('keyup',(e)=>{
+             //expresion regular \D indica todo lo que no es numeros
+            $tel1.value=$tel1.value.replace(/\D/,'')
+        
+             
+             $nombre1.value&&$tel1.value&&$submit1.removeAttribute('disabled')
+             !$nombre1.value||!$tel1.value &&  $submit1.setAttribute('disabled','true')
+        })
+
+      </code>
+    </pre>
+
 	</body>
 </html>
