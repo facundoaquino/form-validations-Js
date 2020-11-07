@@ -111,7 +111,7 @@
 					<label for="paises">Pais</label><img id='country' src="" alt="">
 				</div>
 			 <select form="" name="paises" id="paises">
-        <option selected="true" disabled="disabled">seleccione pais</option>
+        <option selected="true" disabled >seleccione pais</option>
 
          <option value="argentina">Argentina</option>
          <option value="uruguay">uruguay</option>
@@ -120,6 +120,21 @@
        </select>
 			</form>
 		</section>
+		<pre class="precode">
+			<code class="language-javascript">
+	const imgPaises = document.getElementById('country');
+	const $selectPaises = document.getElementById('paises');
+	
+	$selectPaises.addEventListener('change', () => {
+		imgPaises.setAttribute('src', `assets/img/${$selectPaises.value}.svg`);
+	});
+				
+				  
+				</code>
+			  </pre>
+
+
+
 		<hr class="separation" />
     
 
@@ -157,6 +172,10 @@
 			  
 			</code>
 		  </pre>
+
+
+		<hr class="separation" />
+
 
 		<script src="https://kit.fontawesome.com/389c8e1dce.js" crossorigin="anonymous"></script>
 		<script src="assets/js/prism.js"></script>
