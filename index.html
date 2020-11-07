@@ -120,6 +120,43 @@
        </select>
 			</form>
 		</section>
+		<hr class="separation" />
+    
+
+    <section class="form3">
+			<form action="">
+			<div>
+					 <label for="federico">Sos federico?</label>
+	
+					 <input id='check1'  type="radio" name="fede" value = true> <span>true</span> 
+					 <input checked id='check2' type="radio" name="fede" value = false>	 <span>false</span> 
+					 <input id='check3' type="radio" name="fede" value = undefined>	 <span>undefined</span> 
+					 <p id="result"></p>
+					</div>
+				 
+			</form>
+		</section>
+		<pre class="precode">
+		<code class="language-javascript">
+	const $fede = document.querySelectorAll('[name=fede]');
+	const $result = document.getElementById('result')
+		
+	
+		
+	
+	$fede.forEach((item) => {
+	
+			item.checked?
+			console.log(`la opcion seleccionada por defecto es ${item.value}`):''
+		item.addEventListener('input', (e) => {
+				e.target.checked?$result.textContent=`RESULTADO: ${e.target.value}`:'';
+	
+		});
+	});
+			
+			  
+			</code>
+		  </pre>
 
 		<script src="https://kit.fontawesome.com/389c8e1dce.js" crossorigin="anonymous"></script>
 		<script src="assets/js/prism.js"></script>
