@@ -11,7 +11,7 @@ body{
 }
 
 
-.form1 , .form2{
+.form1 , .form2 , .form3{
     margin: 100px auto;
     width: 700px;
     background-color: #2c3e50;
@@ -70,4 +70,35 @@ input:focus{
 
  [disabled]{
      opacity: 0.5;
+ }
+
+ .coment{
+     width: 700px;
+     margin: auto;
+     color: #f2f2f2;
+     font-size: 1.3rem;
+ }
+
+ select {
+     background-color: #2c3e50;
+     color: white;
+     padding: 1rem;
+     /* font-size: 1rem; */
+ }
+ 
+ .container{
+     display: flex;
+     width: 100px;
+     justify-content: space-between;
+ }
+
+ #country{
+     width: 30px;
+      display: inline;
+ }
+ 
+ [for='paises']{
+    
+     padding: 1rem;
+      width: 100px;
  }

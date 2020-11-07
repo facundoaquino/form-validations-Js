@@ -45,3 +45,14 @@ $tel1.addEventListener('keyup',(e)=>{
      $nombre1.value&&$tel1.value&&$submit1.removeAttribute('disabled')
      !$nombre1.value||!$tel1.value &&  $submit1.setAttribute('disabled','true')
 })
+
+
+/*---------------------- formulario 3 ---------------------*/
+
+const imgPaises = document.getElementById('country')
+const $selectPaises= document.getElementById('paises')
+
+$selectPaises.addEventListener('change',()=>{
+      
+     imgPaises.setAttribute('src',`assets/img/${$selectPaises.value}.svg`)
+})
