@@ -176,6 +176,36 @@
 
 		<hr class="separation" />
 
+		<h2 class="coment">Comentario</h2>
+		<span class="coment">Te quedan : <em id="caracter">100</em> </span><span class="coment">  caracteres</span>
+		<section class="form3">
+			<form action="">
+			<textarea maxlength="100" name="" id="text" cols="30" rows="5"></textarea>
+			</form>
+		</section>
+
+		<pre class="precode">
+			<code class="language-css">		 
+  /* limitar el tamaño del textarea */
+
+  textarea{
+      resize: none;
+  }				  
+				</code>
+			  </pre>
+			  <pre class="precode">
+				<code class="language-javascript">		 
+	const $caracter = document.getElementById('caracter')
+	const $textArea = document.getElementById('text')		
+	
+	$textArea.addEventListener('keydown',(e)=>{
+		
+	$caracter.textContent = 100 - e.target.value.length
+
+	})
+					</code>
+				  </pre>
+
 
 		<script src="https://kit.fontawesome.com/389c8e1dce.js" crossorigin="anonymous"></script>
 		<script src="assets/js/prism.js"></script>

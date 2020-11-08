@@ -43,7 +43,7 @@ $tel1.addEventListener('keyup', (e) => {
 
 const imgPaises = document.getElementById('country');
 const $selectPaises = document.getElementById('paises');
-
+console.log('id',$selectPaises.getAttribute('id'));
 $selectPaises.addEventListener('change', () => {
 	imgPaises.setAttribute('src', `assets/img/${$selectPaises.value}.svg`);
 });
@@ -65,3 +65,17 @@ $fede.forEach((item) => {
 
 	});
 });
+
+
+/*---------------------- text area ---------------------*/
+const $caracter = document.getElementById('caracter')
+
+const $textArea = document.getElementById('text')
+
+console.log($caracter.textContent!=100);
+$textArea.addEventListener('keydown',(e)=>{
+	 
+	
+	$caracter.textContent = 100 - e.target.value.length
+
+})

@@ -12,7 +12,7 @@ body{
 
 
 .form1 , .form2 , .form3 {
-    margin: 100px auto;
+    margin: 50px auto;
     width: 700px;
     background-color: #2c3e50;
     color: white;
@@ -108,4 +108,16 @@ input:focus{
      display: inline !important;
  }
 
-  
+  textarea{
+      padding: 1rem;
+      font-weight: 500;
+      color: #2f2f2d;
+      font-size: 1.3rem;
+  }
+
+
+  /* limitar el tamaño del textarea */
+
+  textarea{
+      resize: none;
+  }
