@@ -43,7 +43,7 @@ $tel1.addEventListener('keyup', (e) => {
 
 const imgPaises = document.getElementById('country');
 const $selectPaises = document.getElementById('paises');
-console.log('id',$selectPaises.getAttribute('id'));
+console.log('id', $selectPaises.getAttribute('id'));
 $selectPaises.addEventListener('change', () => {
 	imgPaises.setAttribute('src', `assets/img/${$selectPaises.value}.svg`);
 });
@@ -51,31 +51,37 @@ $selectPaises.addEventListener('change', () => {
 /*---------------------- formulario radio button ---------------------*/
 
 const $fede = document.querySelectorAll('[name=fede]');
-const $result = document.getElementById('result')
- 
-
- 
+const $result = document.getElementById('result');
 
 $fede.forEach((item) => {
-
-     item.checked?
-     console.log(`la opcion seleccionada por defecto es ${item.value}`):''
+	item.checked ? console.log(`la opcion seleccionada por defecto es ${item.value}`) : '';
 	item.addEventListener('input', (e) => {
-           e.target.checked?$result.textContent=`RESULTADO: ${e.target.value}`:'';
-
+		e.target.checked ? ($result.textContent = `RESULTADO: ${e.target.value}`) : '';
 	});
 });
 
-
 /*---------------------- text area ---------------------*/
-const $caracter = document.getElementById('caracter')
+const $caracter = document.getElementById('caracter');
 
-const $textArea = document.getElementById('text')
+const $textArea = document.getElementById('text');
 
-console.log($caracter.textContent!=100);
-$textArea.addEventListener('keydown',(e)=>{
-	 
-	
-	$caracter.textContent = 100 - e.target.value.length
+console.log($caracter.textContent != 100);
+$textArea.addEventListener('keydown', (e) => {
+	$caracter.textContent = 100 - e.target.value.length;
+});
 
-})
+/*---------------------- busqueda ---------------------*/
+
+const $busqueda = document.getElementById('busqueda');
+const $busquedali = document.querySelectorAll('.busqueda__id');
+
+$busqueda.addEventListener('input', (e) => {
+	$busquedali.forEach((li) => {
+		if (!li.textContent.includes(e.target.value)) {
+			//la clase none estableca un display none , puesta en styles.css
+			li.classList.add('none');
+		} else {
+			li.classList.remove('none');
+		}
+	});
+});

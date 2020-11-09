@@ -101,23 +101,19 @@
           
         </code>
       </pre>
-    <hr class="separation" />
-    
+		<hr class="separation" />
 
-    <section class="form3">
+		<section class="form3">
 			<form action="">
-				<div class="container">
+				<div class="container"><label for="paises">Pais</label><img id="country" src="" alt="" /></div>
+				<select form="" name="paises" id="paises">
+					<option selected="true" disabled>seleccione pais</option>
 
-					<label for="paises">Pais</label><img id='country' src="" alt="">
-				</div>
-			 <select form="" name="paises" id="paises">
-        <option selected="true" disabled >seleccione pais</option>
-
-         <option value="argentina">Argentina</option>
-         <option value="uruguay">uruguay</option>
-         <option value="brasil">brasil</option>
-         <option value="chile">chile</option>
-       </select>
+					<option value="argentina">Argentina</option>
+					<option value="uruguay">uruguay</option>
+					<option value="brasil">brasil</option>
+					<option value="chile">chile</option>
+				</select>
 			</form>
 		</section>
 		<pre class="precode">
@@ -133,22 +129,18 @@
 				</code>
 			  </pre>
 
-
-
 		<hr class="separation" />
-    
 
-    <section class="form3">
+		<section class="form3">
 			<form action="">
-			<div>
-					 <label for="federico">Sos federico?</label>
-	
-					 <input id='check1'  type="radio" name="fede" value = true> <span>true</span> 
-					 <input checked id='check2' type="radio" name="fede" value = false>	 <span>false</span> 
-					 <input id='check3' type="radio" name="fede" value = undefined>	 <span>undefined</span> 
-					 <p id="result"></p>
-					</div>
-				 
+				<div>
+					<label for="federico">Sos federico?</label>
+
+					<input id="check1" type="radio" name="fede" value="true" /> <span>true</span>
+					<input checked id="check2" type="radio" name="fede" value="false" /> <span>false</span>
+					<input id="check3" type="radio" name="fede" value="undefined" /> <span>undefined</span>
+					<p id="result"></p>
+				</div>
 			</form>
 		</section>
 		<pre class="precode">
@@ -173,14 +165,13 @@
 			</code>
 		  </pre>
 
-
 		<hr class="separation" />
 
 		<h2 class="coment">Comentario</h2>
-		<span class="coment">Te quedan : <em id="caracter">100</em> </span><span class="coment">  caracteres</span>
+		<span class="coment">Te quedan : <em id="caracter">100</em> </span><span class="coment"> caracteres</span>
 		<section class="form3">
 			<form action="">
-			<textarea maxlength="100" name="" id="text" cols="30" rows="5"></textarea>
+				<textarea maxlength="100" name="" id="text" cols="30" rows="5"></textarea>
 			</form>
 		</section>
 
@@ -193,7 +184,7 @@
   }				  
 				</code>
 			  </pre>
-			  <pre class="precode">
+		<pre class="precode">
 				<code class="language-javascript">		 
 	const $caracter = document.getElementById('caracter')
 	const $textArea = document.getElementById('text')		
@@ -206,6 +197,55 @@
 					</code>
 				  </pre>
 
+		<hr class="separation" />
+
+		<section class="form3 formh">
+			<form action="">
+				<label for="busqueda">Buscar</label>
+				<input type="search" name="" id="busqueda" />
+			</form>
+			<ul class="gridul">
+				<li class="busqueda__id">casa</li>
+				<li class="busqueda__id">arbol</li>
+				<li class="busqueda__id">perro</li>
+				<li class="busqueda__id">gato</li>
+				<li class="busqueda__id">avion</li>
+				<li class="busqueda__id">murcielago</li>
+				<li class="busqueda__id">chancho</li>
+				<li class="busqueda__id">chiche</li>
+				<li class="busqueda__id">bebe</li>
+				<li class="busqueda__id">carrito</li>
+				<li class="busqueda__id">react</li>
+				<li class="busqueda__id">computadora</li>
+				<li class="busqueda__id">chiche</li>
+				<li class="busqueda__id">camiseta</li>
+				<li class="busqueda__id">zorro</li>
+				<li class="busqueda__id">moto</li>
+				<li class="busqueda__id">los redondos</li>
+				<li class="busqueda__id">divididos</li>
+				<li class="busqueda__id">friends</li>
+			</ul>
+		</section>
+
+		<pre class="precode">
+					<code class="language-javascript">		 
+		const $busqueda = document.getElementById('busqueda');
+		const $busquedali = document.querySelectorAll('.busqueda__id');
+		
+		$busqueda.addEventListener('input', (e) => {
+			$busquedali.forEach((li) => {
+				if (!li.textContent.includes(e.target.value)) {
+					//la clase none estableca un display none , puesta en styles.css
+					li.classList.add('none');
+				} else {
+					li.classList.remove('none');
+				}
+			});
+		});
+						
+						</code>
+					  </pre>
+		<hr class="separation" />
 
 		<script src="https://kit.fontawesome.com/389c8e1dce.js" crossorigin="anonymous"></script>
 		<script src="assets/js/prism.js"></script>

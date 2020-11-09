@@ -121,3 +121,26 @@ input:focus{
   textarea{
       resize: none;
   }
+
+
+  ul{
+      margin-left: 2rem;
+  }
+
+  li{
+      list-style: none;
+  }
+
+  .none{
+      display: none;
+  }
+
+  .gridul{
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
+      gap: 10px;
+  }
+
+  .formh{
+      height: 300px;
+  }
