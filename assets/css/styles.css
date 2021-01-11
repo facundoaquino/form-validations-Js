@@ -144,3 +144,23 @@ input:focus{
   .formh{
       height: 300px;
   }
+
+  .formulario{
+      position: relative;
+  }
+
+  .formulario_label {
+    padding-left: 15px;
+    position: absolute;
+    margin-top: -85px;
+    z-index: -20;
+    color: rgba(0,0,0,0.5);
+    transition: all 0.2s;
+  }
+
+  .fijar{
+       
+    margin:  initial;
+
+
+  }

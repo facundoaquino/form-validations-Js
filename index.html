@@ -11,11 +11,13 @@
 		<link rel="stylesheet" href="assets/css/styles.css" />
 		<link rel="stylesheet" href="assets/css/loader.css" />
 		<link rel="stylesheet" href="assets/css/loader2.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 		<title>Fomularios</title>
 	</head>
 	<body>
 		<section class="form1">
 			<form action="">
+				
 				<label for="name">Nombre</label>
 				<!-- el atributo name indica el nombre con el que van a vijar los datos de ese campo -->
 				<input type="text" id="name" placeholder="Ingrese su nombre" required autocomplete="off" />
@@ -168,7 +170,7 @@
 		<hr class="separation" />
 
 		<h2 class="coment">Comentario</h2>
-		<span class="coment">Te quedan : <em id="caracter">100</em> </span><span class="coment"> caracteres</span>
+		<div class="coment"><span class="coment">Te quedan : <em id="caracter">100</em> </span><span class="coment"> caracteres</span></div>
 		<section class="form3">
 			<form action="">
 				<textarea maxlength="100" name="" id="text" cols="30" rows="5"></textarea>
@@ -247,6 +249,23 @@
 					  </pre>
 		<hr class="separation" />
 
+		<form action="" class="formulario">
+            <h1 class="formulario_titulo">Contáctenos</h1>
+            <input type="text" class="formulario_input">
+                <label for="" class="formulario_label">Nombres</label>
+            <input type="text" class="formulario_input">
+				<label for="" class="formulario_label">Correo</label>
+				</form>
+
+
+	 
+ 
+    <input type="number" name="" id="input">
+    <button id="button"> Enviar </button>
+    <div id="resultado">
+        <table id="table"></table>
+    </div>
+ 
 		<script src="https://kit.fontawesome.com/389c8e1dce.js" crossorigin="anonymous"></script>
 		<script src="assets/js/prism.js"></script>
 		<script src="assets/js/main.js"></script>

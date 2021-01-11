@@ -85,3 +85,43 @@ $busqueda.addEventListener('input', (e) => {
 		}
 	});
 });
+
+
+
+
+var inputs = document.getElementsByClassName('formulario_input');
+for (var i = 0; i < inputs.length; i++) {
+	console.log(inputs[i]);
+  inputs[i].addEventListener('keyup', function(){
+    if(this.value.length>=1) {
+      this.nextElementSibling.classList.add('fijar');
+    } else {
+      this.nextElementSibling.classList.remove('fijar');
+    }
+  });
+}
+
+function inici() {
+	 document.getElementById("button").addEventListener("click",generarTabla);
+    var div = document.getElementById("resultado");
+
+    function generarTabla() {
+		console.log('hola');
+        var numero=document.getElementById("input").value;
+        var table=document.getElementById("table");
+
+         
+        table.innerHTML += "<tr> Tabla del "+numero+"</tr>";
+        for(var i=0;i<=10;i++) {
+            table.insertAdjacentHTML('beforeend', "<tr><td>"+numero+"*"+i+"="+numero*i+"</td></tr>")
+        }
+         
+
+
+	}
+	generarTabla();
+}
+
+window.onload=inici;
+
+ 
